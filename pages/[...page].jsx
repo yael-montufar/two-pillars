@@ -3,9 +3,10 @@ import { useRouter } from 'next/router';
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
 import DefaultErrorPage from 'next/error';
 import Head from 'next/head';
+import FontAwesomeIcon from '../components/FontAwesomeIcon'
 
 // Replace with your Public API Key
-builder.init('a88c379035cd4e55b399e82b909479de');
+builder.init(process.env.NEXT_PUBLIC_BUILDER_PUBLIC_KEY);
 
 export async function getStaticProps({ params }) {
   // Fetch the builder content
